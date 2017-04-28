@@ -356,30 +356,163 @@ public class Garcia_franklin_lab1 {
                                 + "4.Salir \n");
                         opcion_ejercito = lectura.next();
                         switch (opcion_ejercito) {
-                            case "1":{
+                            case "1": {
                                 System.out.println("Ingrese posicion a eliminar");
-                                int pos=lectura.nextInt();
+                                int pos = lectura.nextInt();
                                 rusos.remove(pos);
                                 System.out.println("Se elimino con exito");
-                            }break;
-                            case "2":{
+                            }
+                            break;
+                            case "2": {
                                 System.out.println("Ingrese posicion a eliminar");
-                                int pos=lectura.nextInt();
+                                int pos = lectura.nextInt();
                                 alemanes.remove(pos);
                                 System.out.println("Se elimino con exito");
-                            }break;
-                            case "3":{
+                            }
+                            break;
+                            case "3": {
                                 System.out.println("Ingrese posicion a eliminar");
-                                int pos=lectura.nextInt();
+                                int pos = lectura.nextInt();
                                 alumnos.remove(pos);
                                 System.out.println("Se elimino con exito");
-                            }break;
+                            }
+                            break;
                         }
                     }
                 }
                 break;
                 case "4": {
+                    boolean vive = true;
+                    int cont = 0;
+                    int daño = 0;
+                    String gano = "";
+                    while (vive = true) {
+                        if (cont == 0) {
+                            System.out.println("Turno de rusos");
+                            int con = 0;
+                            int res = 0;
+                            for (alemanes a : alemanes) {
+                                if (rusos.get(con).getTipo_arma().equals("AK-47")) {
+                                    res = a.getResistencia() - 27;
+                                    a.setResistencia(res);
+                                    con++;
+                                } else if (rusos.get(con).getTipo_arma().equals("Revolver Navant")) {
+                                    res = a.getResistencia() - 13;
+                                    a.setResistencia(res);
+                                    con++;
+                                } else if (rusos.get(con).getTipo_arma().equals("RPG-7")) {
+                                    res = a.getResistencia() - 57;
+                                    a.setResistencia(res);
+                                    con++;
+                                }
+                            }
+                            for (alumnos a : alumnos) {
+                                if (rusos.get(con).getTipo_arma().equals("AK-47")) {
+                                    res = a.getResistencia() - 27;
+                                    a.setResistencia(res);
+                                    con++;
+                                } else if (rusos.get(con).getTipo_arma().equals("Revolver Navant")) {
+                                    res = a.getResistencia() - 13;
+                                    a.setResistencia(res);
+                                    con++;
+                                } else if (rusos.get(con).getTipo_arma().equals("RPG-7")) {
+                                    res = a.getResistencia() - 57;
+                                    a.setResistencia(res);
+                                    con++;
+                                }
+                            }
+                            cont++;
+                        } else if (cont == 1) {
+                            System.out.println("Turno de alemanes");
+                            int con = 0;
+                            int res = 0;
+                            for (rusos r : rusos) {
+                                if (alemanes.get(con).getTipo_arma().equals("MP 40")) {
+                                    res = r.getResistencia() - 25;
+                                    r.setResistencia(res);
+                                    con++;
+                                } else if (alemanes.get(con).getTipo_arma().equals("Ametralladora MG42")) {
+                                    res = r.getResistencia() - 32;
+                                    r.setResistencia(res);
+                                    con++;
+                                } else if (alemanes.get(con).getTipo_arma().equals("Pistolas Walther P38")) {
+                                    res = r.getResistencia() - 11;
+                                    r.setResistencia(res);
+                                    con++;
+                                }
+                            }
+                            for (alumnos r : alumnos) {
+                                if (alemanes.get(con).getTipo_arma().equals("MP 40")) {
+                                    res = r.getResistencia() - 25;
+                                    r.setResistencia(res);
+                                    con++;
+                                } else if (alemanes.get(con).getTipo_arma().equals("Ametralladora MG42")) {
+                                    res = r.getResistencia() - 32;
+                                    r.setResistencia(res);
+                                    con++;
+                                } else if (alemanes.get(con).getTipo_arma().equals("Pistolas Walther P38")) {
+                                    res = r.getResistencia() - 11;
+                                    r.setResistencia(res);
+                                    con++;
+                                }
+                            }
 
+                            cont++;
+                        } else if (cont == 2) {
+                            System.out.println("Truno de alumnos");
+                            int con = 0;
+                            int res = 0;
+                            for (rusos r : rusos) {
+                                if (alumnos.get(con).getTipo_arma().equals("Discos duros")) {
+                                    res = r.getResistencia() - 23;
+                                    r.setResistencia(res);
+                                    con++;
+                                } else if (alumnos.get(con).getTipo_arma().equals("Controles de Wii")) {
+                                    res = r.getResistencia() - 47;
+                                    r.setResistencia(res);
+                                    con++;
+                                } else if (alumnos.get(con).getTipo_arma().equals("Laptos")) {
+                                    res = r.getResistencia() - 76;
+                                    r.setResistencia(res);
+                                    con++;
+                                }
+                            }
+                            for (alemanes r : alemanes) {
+                                if (alumnos.get(con).getTipo_arma().equals("Discos duros")) {
+                                    res = r.getResistencia() - 23;
+                                    r.setResistencia(res);
+                                    con++;
+                                } else if (alumnos.get(con).getTipo_arma().equals("Controles de Wii")) {
+                                    res = r.getResistencia() - 47;
+                                    r.setResistencia(res);
+                                    con++;
+                                } else if (alumnos.get(con).getTipo_arma().equals("Laptos")) {
+                                    res = r.getResistencia() - 76;
+                                    r.setResistencia(res);
+                                    con++;
+                                }
+                            }
+                            cont = 0;
+                        }
+                        
+                        for (rusos r : rusos) {
+                            
+                        }
+                        
+                        
+                        if (alemanes_viven(alemanes) == false && alumnos_viven(alumnos) == false) {
+                            gano = "gano rusia";
+                            break;
+
+                        } else if (rusos_viven(rusos) == false && alumnos_viven(alumnos) == false) {
+                            gano = "gano alemanes";
+                            break;
+                        } else if (rusos_viven(rusos) == false && alemanes_viven(alemanes) == false) {
+                            gano = "gano alumnos";
+                            break;
+                        }
+                    }
+                    System.out.println(gano);
                 }
                 break;
                 case "5": {
@@ -416,6 +549,30 @@ public class Garcia_franklin_lab1 {
                 }
                 break;
             }
+        }
+    }
+
+    public static boolean rusos_viven(ArrayList rusos) {
+        if (rusos.isEmpty()) {
+            return false;
+        } else {
+            return true;
+        }
+    }
+
+    public static boolean alemanes_viven(ArrayList alemanes) {
+        if (alemanes.isEmpty()) {
+            return false;
+        } else {
+            return true;
+        }
+    }
+
+    public static boolean alumnos_viven(ArrayList alumnos) {
+        if (alumnos.isEmpty()) {
+            return false;
+        } else {
+            return true;
         }
     }
 
