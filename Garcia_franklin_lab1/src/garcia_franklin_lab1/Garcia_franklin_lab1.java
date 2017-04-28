@@ -496,10 +496,20 @@ public class Garcia_franklin_lab1 {
                         }
                         
                         for (rusos r : rusos) {
-                            
+                            if (r.getResistencia()<=0) {
+                                rusos.remove(r);
+                            }
                         }
-                        
-                        
+                        for (alemanes a: alemanes) {
+                            if (a.getResistencia()<=0) {
+                                alemanes.remove(a);
+                            }
+                        }
+                        for (alumnos a : alumnos) {
+                            if (a.getResistencia()<=0) {
+                                alumnos.remove(a);
+                            }
+                        }
                         if (alemanes_viven(alemanes) == false && alumnos_viven(alumnos) == false) {
                             gano = "gano rusia";
                             break;
