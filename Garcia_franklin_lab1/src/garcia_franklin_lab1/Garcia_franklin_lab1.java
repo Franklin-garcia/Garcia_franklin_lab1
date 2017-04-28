@@ -494,11 +494,13 @@ public class Garcia_franklin_lab1 {
                             }
                             cont = 0;
                         }
-                        
+                        int conff=0;
                         for (rusos r : rusos) {
                             if (r.getResistencia()<=0) {
+                                muertos.add(rusos.get(conff));  
                                 rusos.remove(r);
                             }
+                            conff++;
                         }
                         for (alemanes a: alemanes) {
                             if (a.getResistencia()<=0) {
