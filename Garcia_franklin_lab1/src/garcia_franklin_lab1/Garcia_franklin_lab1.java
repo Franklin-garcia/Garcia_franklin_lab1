@@ -28,8 +28,8 @@ public class Garcia_franklin_lab1 {
                     + "1.Reclutar \n"
                     + "2.Modificar \n"
                     + "3.Dar de alta \n"
-                    + "4.Reportes \n"
-                    + "5.Simulacion \n"
+                    + "4.Simulacion \n"
+                    + "5.Reportes \n"
                     + "6-Salir \n");
             opcion = lectura.next();
             switch (opcion) {
@@ -56,7 +56,7 @@ public class Garcia_franklin_lab1 {
                                 id = lectura.nextInt();
                                 System.out.println("Ingrese edad");
                                 edad = lectura.nextInt();
-                                while (edad > 18) {
+                                while (edad < 18) {
                                     System.out.println("Edad no valida \n"
                                             + "Ingrese edad mayor de 18 años \n");
                                     edad = lectura.nextInt();
@@ -65,6 +65,10 @@ public class Garcia_franklin_lab1 {
                                 rango = lectura.nextInt();
                                 System.out.println("Ingrese resistencia");
                                 resistencia = lectura.nextInt();
+                                while (resistencia < edad * 5) {
+                                    System.out.println("Ingrese resistencia");
+                                    resistencia = lectura.nextInt();
+                                }
                                 System.out.println("Elija tipo de arma \n "
                                         + " 1.AK-47 \n"
                                         + " 2.Revolver Navant \n "
@@ -91,7 +95,7 @@ public class Garcia_franklin_lab1 {
                                 alias = lectura.next();
                                 System.out.println("Ingrese edad");
                                 edad = lectura.nextInt();
-                                while (edad > 0) {
+                                while (edad < 0) {
                                     System.out.println("Edad no valida \n"
                                             + "Ingrese edad mayor de 0 años \n");
                                     edad = lectura.nextInt();
@@ -100,6 +104,10 @@ public class Garcia_franklin_lab1 {
                                 casta = lectura.next();
                                 System.out.println("Ingrese resistencia");
                                 resistencia = lectura.nextInt();
+                                while (resistencia < edad * 5) {
+                                    System.out.println("Ingrese resistencia");
+                                    resistencia = lectura.nextInt();
+                                }
                                 System.out.println("Ingrese opcion de arma \n"
                                         + "1.MP 40 \n "
                                         + "2.Ametralladora MG42 \n"
@@ -131,13 +139,17 @@ public class Garcia_franklin_lab1 {
                                 numero_cuenta = lectura.nextInt();
                                 System.out.println("ingrese edad");
                                 edad = lectura.nextInt();
-                                while (edad > 16) {
+                                while (edad < 16) {
                                     System.out.println("Edad no valida \n"
                                             + "Ingrese edad mayor de 18 años \n");
                                     edad = lectura.nextInt();
                                 }
                                 System.out.println("Ingrese resistencia");
                                 resistencia = lectura.nextInt();
+                                while (resistencia < edad * 5) {
+                                    System.out.println("Ingrese resistencia");
+                                    resistencia = lectura.nextInt();
+                                }
                                 System.out.println("Ingrese tipo de arama \n"
                                         + "1.Discos duros \n"
                                         + "2.Controles de Wii \n"
@@ -183,7 +195,7 @@ public class Garcia_franklin_lab1 {
                                 id = lectura.nextInt();
                                 System.out.println("Ingrese edad");
                                 edad = lectura.nextInt();
-                                while (edad > 18) {
+                                while (edad < 18) {
                                     System.out.println("Edad no valida \n"
                                             + "Ingrese edad mayor de 18 años \n");
                                     edad = lectura.nextInt();
@@ -192,6 +204,10 @@ public class Garcia_franklin_lab1 {
                                 rango = lectura.nextInt();
                                 System.out.println("Ingrese resistencia");
                                 resistencia = lectura.nextInt();
+                                while (resistencia < edad * 5) {
+                                    System.out.println("Ingrese resistencia");
+                                    resistencia = lectura.nextInt();
+                                }
                                 System.out.println("Elija tipo de arma \n "
                                         + " 1.AK-47 \n"
                                         + " 2.Revolver Navant \n "
@@ -226,7 +242,7 @@ public class Garcia_franklin_lab1 {
                                 alias = lectura.next();
                                 System.out.println("Ingrese edad");
                                 edad = lectura.nextInt();
-                                while (edad > 0) {
+                                while (edad < 0) {
                                     System.out.println("Edad no valida \n"
                                             + "Ingrese edad mayor de 18 años \n");
                                     edad = lectura.nextInt();
@@ -235,6 +251,10 @@ public class Garcia_franklin_lab1 {
                                 casta = lectura.next();
                                 System.out.println("Ingrese resistencia");
                                 resistencia = lectura.nextInt();
+                                while (resistencia < 5 * edad) {
+                                    System.out.println("Ingrese resistencia");
+                                    resistencia = lectura.nextInt();
+                                }
                                 System.out.println("Ingrese opcion de arma \n"
                                         + "1.MP 40 \n "
                                         + "2.Ametralladora MG42 \n"
@@ -274,13 +294,17 @@ public class Garcia_franklin_lab1 {
                                 numero_cuenta = lectura.nextInt();
                                 System.out.println("ingrese edad");
                                 edad = lectura.nextInt();
-                                while (edad > 16) {
+                                while (edad < 16) {
                                     System.out.println("Edad no valida \n"
                                             + "Ingrese edad mayor de 18 años \n");
                                     edad = lectura.nextInt();
                                 }
                                 System.out.println("Ingrese resistencia");
                                 resistencia = lectura.nextInt();
+                                while (resistencia < 5 * edad) {
+                                    System.out.println("Ingrese resistencia");
+                                    resistencia = lectura.nextInt();
+                                }
                                 System.out.println("Ingrese tipo de arama \n"
                                         + "1.Discos duros \n"
                                         + "2.Controles de Wii \n"
@@ -319,6 +343,10 @@ public class Garcia_franklin_lab1 {
                 }
                 break;
                 case "4": {
+
+                }
+                break;
+                case "5": {
                     System.out.println("Ingrese opcion \n"
                             + "1.rusos \n"
                             + "2.Alemanes \n"
@@ -349,10 +377,6 @@ public class Garcia_franklin_lab1 {
                         }
                         System.out.println(e);
                     }
-                }
-                break;
-                case "5": {
-
                 }
                 break;
             }
