@@ -81,7 +81,7 @@ private String grado_academico;
 
     @Override
     public String toString() {
-        return "alumnos{" + "apodo=" + apodo + ", numero_cuenta=" + numero_cuenta + ", edad=" + edad + ", resistencia=" + resistencia + ", tipo_arma=" + tipo_arma + ", grado_academico=" + grado_academico + '}';
+        return "alumno{" + "apodo=" + apodo + ", numero_cuenta=" + numero_cuenta + ", edad=" + edad + ", resistencia=" + resistencia + ", tipo_arma=" + tipo_arma + ", grado_academico=" + grado_academico + '}';
     }
 
 

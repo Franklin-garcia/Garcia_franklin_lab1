@@ -79,7 +79,7 @@ private String tipo_arma;
 
     @Override
     public String toString() {
-        return "alemanes{" + "nombre=" + nombre + ", id=" + id + ", edad=" + edad + ", rango=" + rango + ", resistencia=" + resistencia + ", tipo_arma=" + tipo_arma + '}';
+        return "alemane{" + "nombre=" + nombre + ", id=" + id + ", edad=" + edad + ", rango=" + rango + ", resistencia=" + resistencia + ", tipo_arma=" + tipo_arma + '}';
     }
     
 }
