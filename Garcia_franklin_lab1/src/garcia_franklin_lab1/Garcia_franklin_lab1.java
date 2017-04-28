@@ -494,23 +494,29 @@ public class Garcia_franklin_lab1 {
                             }
                             cont = 0;
                         }
-                        int conff=0;
+                        int conff = 0;
                         for (rusos r : rusos) {
-                            if (r.getResistencia()<=0) {
-                                muertos.add(rusos.get(conff));  
+                            if (r.getResistencia() <= 0) {
+                                muertos.add(rusos.get(conff));
                                 rusos.remove(r);
                             }
                             conff++;
                         }
-                        for (alemanes a: alemanes) {
-                            if (a.getResistencia()<=0) {
+                        int conf = 0;
+                        for (alemanes a : alemanes) {
+                            if (a.getResistencia() <= 0) {
+                                muertos.add(rusos.get(conf));
                                 alemanes.remove(a);
                             }
+                            conf++;
                         }
+                        int conv = 0;
                         for (alumnos a : alumnos) {
-                            if (a.getResistencia()<=0) {
+                            if (a.getResistencia() <= 0) {
+                                muertos.add(rusos.get(conv));
                                 alumnos.remove(a);
                             }
+                            conv++;
                         }
                         if (alemanes_viven(alemanes) == false && alumnos_viven(alumnos) == false) {
                             gano = "gano rusia";
