@@ -21,7 +21,9 @@ public class Garcia_franklin_lab1 {
     public static void main(String[] args) {
         Scanner lectura = new Scanner(System.in);
         String opcion = "";
-        ArrayList lista = new ArrayList();
+        ArrayList<rusos> rusos = new ArrayList();
+        ArrayList<alemanes> alemanes = new ArrayList();
+        ArrayList<alumnos> alumnos = new ArrayList();
         ArrayList muertos = new ArrayList();
         while (!opcion.equalsIgnoreCase("6")) {
             System.out.println("Ingrese opcion \n"
@@ -65,7 +67,7 @@ public class Garcia_franklin_lab1 {
                                 rango = lectura.nextInt();
                                 System.out.println("Ingrese resistencia");
                                 resistencia = lectura.nextInt();
-                                while (resistencia < edad * 5) {
+                                while (resistencia < edad * 8) {
                                     System.out.println("Ingrese resistencia");
                                     resistencia = lectura.nextInt();
                                 }
@@ -81,7 +83,21 @@ public class Garcia_franklin_lab1 {
                                 } else if (arma.equals("3")) {
                                     tipo_arma = "RPG-7";
                                 }
-                                lista.add(new rusos(nombre, id, edad, rango, resistencia, tipo_arma));
+                                while (edad < 25 && tipo_arma.equals("RPG-7")) {
+                                    System.out.println("Elija tipo de arma \n "
+                                            + " 1.AK-47 \n"
+                                            + " 2.Revolver Navant \n "
+                                            + " 3.RPG-7 \n");
+                                    arma = lectura.next();
+                                    if (arma.equals("1")) {
+                                        tipo_arma = "AK-47";
+                                    } else if (arma.equals("2")) {
+                                        tipo_arma = "Revolver Navant";
+                                    } else if (arma.equals("3")) {
+                                        tipo_arma = "RPG-7";
+                                    }
+                                }
+                                rusos.add(new rusos(nombre, id, edad, rango, resistencia, tipo_arma));
                                 System.out.println("Se agrego con exito");
                             }
                             break;
@@ -104,7 +120,7 @@ public class Garcia_franklin_lab1 {
                                 casta = lectura.next();
                                 System.out.println("Ingrese resistencia");
                                 resistencia = lectura.nextInt();
-                                while (resistencia < edad * 5) {
+                                while (resistencia < edad * 8) {
                                     System.out.println("Ingrese resistencia");
                                     resistencia = lectura.nextInt();
                                 }
@@ -120,7 +136,7 @@ public class Garcia_franklin_lab1 {
                                 } else if (tipo_arma.equals("3")) {
                                     tipo_arma = "Pistolas Walther P38";
                                 }
-                                lista.add(new alemanes(alias, edad, casta, resistencia, tipo_arma));
+                                alemanes.add(new alemanes(alias, edad, casta, resistencia, tipo_arma));
                                 System.out.println("Se agrego con exito");
                             }
                             break;
@@ -146,7 +162,7 @@ public class Garcia_franklin_lab1 {
                                 }
                                 System.out.println("Ingrese resistencia");
                                 resistencia = lectura.nextInt();
-                                while (resistencia < edad * 5) {
+                                while (resistencia < edad * 8) {
                                     System.out.println("Ingrese resistencia");
                                     resistencia = lectura.nextInt();
                                 }
@@ -162,7 +178,7 @@ public class Garcia_franklin_lab1 {
                                 } else if (opcion_arma.equals("3")) {
                                     tipo_arma = "Laptops";
                                 }
-                                lista.add(new alumnos(grado_academico, apodo, numero_cuenta, edad, resistencia, tipo_arma));
+                                alumnos.add(new alumnos(grado_academico, apodo, numero_cuenta, edad, resistencia, tipo_arma));
                                 System.out.println("Se agrego con exito");
                             }
                             break;
@@ -204,7 +220,7 @@ public class Garcia_franklin_lab1 {
                                 rango = lectura.nextInt();
                                 System.out.println("Ingrese resistencia");
                                 resistencia = lectura.nextInt();
-                                while (resistencia < edad * 5) {
+                                while (resistencia < edad * 8) {
                                     System.out.println("Ingrese resistencia");
                                     resistencia = lectura.nextInt();
                                 }
@@ -221,12 +237,12 @@ public class Garcia_franklin_lab1 {
                                     tipo_arma = "RPG-7";
                                 }
 
-                                ((rusos) lista.get(pos)).setEdad(edad);
-                                ((rusos) lista.get(pos)).setId(id);
-                                ((rusos) lista.get(pos)).setNombre(nombre);
-                                ((rusos) lista.get(pos)).setRango(rango);
-                                ((rusos) lista.get(pos)).setResistencia(resistencia);
-                                ((rusos) lista.get(pos)).setTipo_arma(tipo_arma);
+                                ((rusos) rusos.get(pos)).setEdad(edad);
+                                ((rusos) rusos.get(pos)).setId(id);
+                                ((rusos) rusos.get(pos)).setNombre(nombre);
+                                ((rusos) rusos.get(pos)).setRango(rango);
+                                ((rusos) rusos.get(pos)).setResistencia(resistencia);
+                                ((rusos) rusos.get(pos)).setTipo_arma(tipo_arma);
                                 System.out.println("Se modifico con exito");
                             }
                             break;
@@ -251,7 +267,7 @@ public class Garcia_franklin_lab1 {
                                 casta = lectura.next();
                                 System.out.println("Ingrese resistencia");
                                 resistencia = lectura.nextInt();
-                                while (resistencia < 5 * edad) {
+                                while (resistencia < 8 * edad) {
                                     System.out.println("Ingrese resistencia");
                                     resistencia = lectura.nextInt();
                                 }
@@ -268,11 +284,11 @@ public class Garcia_franklin_lab1 {
                                     tipo_arma = "Pistolas Walther P38";
                                 }
 
-                                ((alemanes) lista.get(pos)).setAlias(alias);
-                                ((alemanes) lista.get(pos)).setCasta(casta);
-                                ((alemanes) lista.get(pos)).setEdad(edad);
-                                ((alemanes) lista.get(pos)).setResistencia(resistencia);
-                                ((alemanes) lista.get(pos)).setTipo_arma(tipo_arma);
+                                ((alemanes) alemanes.get(pos)).setAlias(alias);
+                                ((alemanes) alemanes.get(pos)).setCasta(casta);
+                                ((alemanes) alemanes.get(pos)).setEdad(edad);
+                                ((alemanes) alemanes.get(pos)).setResistencia(resistencia);
+                                ((alemanes) alemanes.get(pos)).setTipo_arma(tipo_arma);
                                 System.out.println("Se modifico con exito");
 
                             }
@@ -301,7 +317,7 @@ public class Garcia_franklin_lab1 {
                                 }
                                 System.out.println("Ingrese resistencia");
                                 resistencia = lectura.nextInt();
-                                while (resistencia < 5 * edad) {
+                                while (resistencia < 8 * edad) {
                                     System.out.println("Ingrese resistencia");
                                     resistencia = lectura.nextInt();
                                 }
@@ -317,12 +333,12 @@ public class Garcia_franklin_lab1 {
                                 } else if (opcion_arma.equals("3")) {
                                     tipo_arma = "Laptops";
                                 }
-                                ((alumnos) lista.get(pos)).setApodo(apodo);
-                                ((alumnos) lista.get(pos)).setEdad(edad);
-                                ((alumnos) lista.get(pos)).setGrado_academico(grado_academico);
-                                ((alumnos) lista.get(pos)).setNumero_cuenta(numero_cuenta);
-                                ((alumnos) lista.get(pos)).setResistencia(resistencia);
-                                ((alumnos) lista.get(pos)).setTipo_arma(tipo_arma);
+                                ((alumnos) alumnos.get(pos)).setApodo(apodo);
+                                ((alumnos) alumnos.get(pos)).setEdad(edad);
+                                ((alumnos) alumnos.get(pos)).setGrado_academico(grado_academico);
+                                ((alumnos) alumnos.get(pos)).setNumero_cuenta(numero_cuenta);
+                                ((alumnos) alumnos.get(pos)).setResistencia(resistencia);
+                                ((alumnos) alumnos.get(pos)).setTipo_arma(tipo_arma);
                                 System.out.println("Se modifico con exito");
                             }
                             break;
@@ -331,15 +347,35 @@ public class Garcia_franklin_lab1 {
                 }
                 break;
                 case "3": {
-                    String e = "";
-                    for (Object t : lista) {
-                        e = "\n" + lista.indexOf(t) + " " + t;
-                        System.out.println(e);
+                    String opcion_ejercito = "";
+                    while (!opcion_ejercito.equalsIgnoreCase("4")) {
+                        System.out.println("Ingrese opcion de ejrcito \n"
+                                + "1-Rusos \n"
+                                + "2-alemanes \n"
+                                + "3.Alumnos \n"
+                                + "4.Salir \n");
+                        opcion_ejercito = lectura.next();
+                        switch (opcion_ejercito) {
+                            case "1":{
+                                System.out.println("Ingrese posicion a eliminar");
+                                int pos=lectura.nextInt();
+                                rusos.remove(pos);
+                                System.out.println("Se elimino con exito");
+                            }break;
+                            case "2":{
+                                System.out.println("Ingrese posicion a eliminar");
+                                int pos=lectura.nextInt();
+                                alemanes.remove(pos);
+                                System.out.println("Se elimino con exito");
+                            }break;
+                            case "3":{
+                                System.out.println("Ingrese posicion a eliminar");
+                                int pos=lectura.nextInt();
+                                alumnos.remove(pos);
+                                System.out.println("Se elimino con exito");
+                            }break;
+                        }
                     }
-                    System.out.println("Ingrese opcion para eliminar");
-                    int pos = lectura.nextInt();
-                    lista.remove(pos);
-                    System.out.println("Se elimino con exito");
                 }
                 break;
                 case "4": {
